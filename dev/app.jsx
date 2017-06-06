@@ -5,22 +5,8 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
 import LeftNav from './components/leftnav.jsx';
-
-class SlightLeftNav extends React.Component{
-    render(){
-        return <div className="list secondlist">
-                    Test2
-               </div>;
-    }
-}
-
-class MainContent extends React.Component{
-    render(){
-        return <div className="content">
-                    Test3
-               </div>;
-    }
-}
+import SlightLeftNav from './components/slightleftnav.jsx';
+import MainContent from './components/maincontent.jsx';
 
 class Layout extends React.Component{
     render(){
