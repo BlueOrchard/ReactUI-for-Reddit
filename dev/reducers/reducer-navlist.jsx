@@ -1,3 +1,15 @@
 export default () => {
-    return ["Front Page", "Browse Subreddit", "Settings"];
+    return [
+        {
+            name: "Front Page",
+            id: 1
+        }, 
+        {
+            name:"Browse Subreddit",
+            id: 2
+        }, 
+        {
+            name: "Settings",
+            id: 3
+        }];
 }

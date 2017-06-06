@@ -1,9 +1,26 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-export default class LeftNav extends React.Component{
+class LeftNav extends React.Component{
+    maplistNav(){
+        return this.props.navList.map((item) => {
+            return(<div key={item.id}>
+                       {item.name}
+                   </div>);
+        });
+    }
+
     render(){
         return <div className="list">
-                    Test
+                    {this.maplistNav()}
                </div>;
     }
 }
+
+function mapStateToProps(state){
+    return {
+        navList: state.navList
+    }
+}
+
+export default connect(mapStateToProps)(LeftNav);
