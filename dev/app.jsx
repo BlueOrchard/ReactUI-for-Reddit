@@ -8,7 +8,15 @@ import LeftNav from './components/leftnav.jsx';
 import SlightLeftNav from './components/slightleftnav.jsx';
 import MainContent from './components/maincontent.jsx';
 
+import allReducers from './reducers/index.jsx'
+
+const store = createStore(allReducers);
+
 class Layout extends React.Component{
+    constructor(props){
+        super(props);
+    }
+
     render(){
         return(<div className="main">
                 <LeftNav />
@@ -18,4 +26,8 @@ class Layout extends React.Component{
     }
 }
 
-ReactDOM.render(<Layout />, document.getElementById('app'));
+ReactDOM.render(
+    <Provider store={store}>
+        <Layout />
+    </Provider>
+    , document.getElementById('app'));
